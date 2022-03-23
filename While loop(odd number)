@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int sum, num, input;
+    sum=0;
+    num=1;
+    // Write C++ code here
+    cout << "please insert the number"<<endl;
+    cin>>input;
+    while(num<=input)
+    {
+        if((num%2)!=0)
+        {
+            sum=sum+num;
+        }
+            num=num+1;
+    }
+
+        cout<<"the sum of even Number start form 1 to "<<input<< " is following"<<endl;
+        cout<<sum;
+    return 0;
+}

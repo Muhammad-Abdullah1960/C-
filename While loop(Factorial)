@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int fac, num;
+	fac=1;
+	num=1;
+	cout<<"Please inser Your number"<<endl;
+	cin>>num;
+	while(num>1)
+	{
+		fac=fac*num;
+		num=num-1;
+	}
+	cout<<"Factorial of "<<num<<" is = "<<fac;
+}

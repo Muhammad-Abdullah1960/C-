@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+double num, in, up;
+cout<<"Please input the number for table"<<endl;
+cin>>in;
+cout<<"Please input Upper Limit"<<endl;
+cin>>up;
+for(num=1; num <=up; num=num+1)
+{
+    cout<<in<<" x "<<num<<" = "<<in*num<<endl;
+}
+
+    return 0;
+}

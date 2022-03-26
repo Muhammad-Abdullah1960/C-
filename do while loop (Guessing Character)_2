@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main()
+{
+int num=0;
+char c;
+cout<<"Please type your character for Guessing"<<endl;
+    do
+    {
+        
+        cin>>c;
+        if(c=='k')
+        {
+            cout<<"Congrulation Your Guess is correct"<<endl;
+        }
+        else
+        {
+            num=num+1;
+            cout<<"Please try again"<<endl;
+        }
+    }
+    while(num<=5 && c!='k');
+    cout<<"Thank you for using this program";
+    return 0;
+}

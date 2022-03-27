@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int num, in, sum;
+    sum=0;
+    cout<<"Please give the number for sum of Squire"<<endl;
+    cin>>in;
+    for(num=1; num<=in; num++)
+    {
+        sum+=num*num;
+    }
+    cout<<"The sum of ths squires of "<<in<<" is = "<<sum;
+    return 0;
+}

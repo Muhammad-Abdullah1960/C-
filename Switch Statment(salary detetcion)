@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+int s;
+float d, n;
+cout<<"Please insert Your salary to calculate NetPayble Amount"<<endl;
+cin>>s;
+switch(s/10000)
+{
+    case 0:
+    d=0;
+    n=s;
+    cout<<"Deduction from Your Salary is 0% = "<<d<<endl<<"NetPayble Amount is = Salary - Deduction "<<endl<<s<<" - "<<d<<" = "<<n;
+    break;
+    
+    case 1:
+    d=s*10/100;
+    n=s-d;
+    cout<<"Deduction from Your Salary is 10% = "<<d<<endl<<"NetPayble Amount is = Salary - Deduction "<<endl<<s<<" - "<<d<<" = "<<n;
+    break;
+    
+    default:
+    d=s*15/100;
+    n=s-d;
+    cout<<"Deduction from Your Salary is 15% = "<<d<<endl<<"NetPayble Amount is = Salary - Deduction "<<endl<<s<<" - "<<d<<" = "<<n;
+    
+    
+}
+
+    return 0;
+}

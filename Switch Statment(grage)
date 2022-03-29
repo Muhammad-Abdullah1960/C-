@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+char grade;
+	cout<<"Please insert the grade"<<endl;
+	cin>>grade;
+	switch(grade)
+	{
+		case 'a':
+		case 'A':
+			cout<<"Excellent";
+		break;
+		case 'b':
+		case 'B':
+			cout<<"Very Goood";
+		break;
+		case 'c':
+		case 'C':
+			cout<<"Good";
+		break;
+		case 'd':
+		case 'D':
+			cout<<"Need hard work";
+		break;
+		case 'f':
+		case 'F':
+			cout<<"Fail";
+		break;
+		default:
+			cout<<"Please insert the grade b/w A-D of F"<<endl;
+	}
+
+    return 0;
+}

@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+char grade;
+cout<<"Please insert Your Grade,"<<endl<<"Grade should be According to the Following"<<endl;
+cout<<"A1 = Excellent"<<endl;
+cout<<"A = Very Good"<<endl;
+cout<<"B = Good"<<endl;
+cout<<"C = Wah Kya Bat ha"<<endl;
+cout<<"F = Fail"<<endl;
+cin>>grade;
+switch(grade)
+{
+    case 'a':
+    case 'A':
+    cout<<"Excellent";
+    break;
+    case 'b':
+    case 'B':
+    cout<<"Very Good";
+    break;
+    case 'c':
+    case 'C':
+    cout<<"Wah Kya Bat ha";
+    break;
+    case 'd':
+    case 'D':
+    cout<<"Good";
+    break;
+    case 'f':
+    case 'F':
+    cout<<"You are Fail";
+    break;
+    default:
+    cout<<"You Input Incorrect Grade"<<endl<<"Please insert the correct Grade";
+}
+    return 0;
+}

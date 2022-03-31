@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int squire(int);
+int main()
+{
+    int num, result;
+    num=0;
+    result=0;
+    cout<<"Please give the num for the squire"<<endl;
+    cin>>num;
+    result=squire(num);
+    cout<<"The Squire of your number is "<<num<< " " <<result;
+    return 0;
+    
+}
+int squire(int num )
+{
+    return(num*num);
+    
+}

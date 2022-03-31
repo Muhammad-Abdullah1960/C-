@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int cube(int);
+int main()
+{
+    int num, dp;
+    num=0;
+    dp=0;
+    cout<<"This Program will calculate the cube root of your number"<<endl;
+    cin>>num;
+    dp=cube(10+num);
+    cout<<"The Cube of "<<num<<" is "<<dp;
+    return 0;
+    
+}
+int cube(int num)
+{
+    return(num*num*num);
+}

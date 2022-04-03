@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+double pow(double, int);
+int main() 
+{
+    int x, i;
+    cout << "Please inter the base"<<endl;
+    cin>>x;
+    cout <<"Please inter the power"<<endl;
+    cin >>i;
+    cout<<"The Power "<<i<<" of the base "<<x<< " is = "<<pow(x,i);
+    return 0;
+}
+double pow(double x, int p)
+{
+    double result;
+    int i;
+    result=1.0;
+    for(i=1; i<=p; i++)
+    {
+        result*=x;
+    }
+    return(result);
+    
+}

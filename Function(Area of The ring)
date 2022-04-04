@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+double area(double);
+int main() 
+{
+    double r1, r2, ring;
+    cout << "This Program will calculate the Area of the ring, You have to Provided Inner and Outer Radious of the Ring"<<endl<<endl;
+    cout << "Please insert the inner radious"<<endl;
+    cin>>r1;
+    cout << "Please insert the outer radious"<<endl;
+    cin>>r2;
+    ring=area(r2)-area(r1);
+    cout<<"The Area of the circule having inner radious "<<r1<<" and the Outer radious "<<r2<< " is "<<ring;
+
+    return 0;
+}
+double area(double r)
+{
+    return(r*r*3.14);
+}

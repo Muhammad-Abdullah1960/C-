@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a[100];
+	
+	cout<<"This Program will take input from the user upto 100 integer and the input end with (-1)";
+		int z, i=0;
+	do
+	{
+	
+		
+		cout<<"Please insert Your integer, if You want to terminate the Program then input (-1)"<<endl<<endl;
+		cout<<"You can Enter Upto 101 Integer"<<endl;
+		cin>>z;
+			if(z!=-1)
+			{
+				a[i]=z;
+				
+			}	
+		i++;
+	}
+	while(z!=-1&&i<100);
+	cout<<"The to total number of the integer enter by the user is "<<i-1;
+	
+	
+	
+	
+	
+	return 0;
+	
+	
+	
+	
+}

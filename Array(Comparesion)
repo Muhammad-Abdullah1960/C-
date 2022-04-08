@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a[5], b[5], i, e=0;
+	cout<<"Please inser 5 Digit for the first array"<<endl;
+	for(i=0; i<5; i++)
+	{
+		cin>>a[i];
+	}
+	
+	cout<<"Please inser 5 Digit for the second array"<<endl;
+	for(i=0; i<5; i++)
+	{
+		cin>>b[i];
+	}
+	cout<<"The element of the first Array are"<<"\n";
+	for(i=0; i<5; i++)
+	{
+		cout<<"\t"<<a[i];
+	}
+	cout<<"\n"<<"The element of the second Array are"<<"\n";
+	for(i=0; i<5; i++)
+	{
+		cout<<"\t"<<b[i];
+	}
+	for(i=0; i<5; i++)
+		if(a[i]!=b[i])
+		{
+			e=1;
+			break;
+		}
+		if(e==1)
+		{
+			cout<<"\n"<<"The Element are not equal"<<endl;
+		}
+		else
+		{
+			cout<<"\n"<<"The Element are equal"<<endl;
+		}
+		return 0;
+		
+}

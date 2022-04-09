@@ -18,6 +18,7 @@ int main()
             {
                 cout<<"\t"<<m[row][col];
             }
+            cout<<"\t"<<endl;
         }
 
     return 0;

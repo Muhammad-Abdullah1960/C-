@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int m[2][3], row, col, mrow=2, mcol=3, i;
+    for(row=0; row<mrow; row++)
+        {
+            for(col=0; col<mcol; col++)
+            {
+                cout<<"Please insert the value for the Position"<<endl;
+                cin>>m[row][col];
+            }
+        }
+    cout<<endl<<"The Element enter by the user is"<<endl;    
+    for(row=0; row<mrow; row++)
+        {
+            for(col=0; col<mcol; col++)
+            {
+                cout<<"\t"<<m[row][col];
+            }
+        }
+
+    return 0;
+}

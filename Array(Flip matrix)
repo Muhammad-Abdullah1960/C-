@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    const int mxrow=3;
+    const int mxcol=3;
+    int row, col, a[3][3];
+    for(row=0; row<mxrow; row++)
+    {
+        for(col=0; col<mxcol; col++)
+        {
+            cout<<"Please insert the Number"<<endl;
+            cin>>a[row][col];
+        }
+    }
+    cout<<"The Matrix You Enter is"<<"\n";
+    for(row=0; row<mxrow; row++)
+    {
+        for(col=0; col<mxcol; col++)
+        {
+            cout<<"\t"<<a[row][col];
+        }
+        cout<<endl;
+    }
+    cout<<"The Flip Matrix is "<<endl;
+    for(row=mxrow-1; row>=0; row--)
+        {
+            for(col=0; col<mxcol; col++)
+                {
+                    cout<<"\t"<<a[row][col];
+                }
+                cout<<endl;
+        }
+
+    return 0;
+}

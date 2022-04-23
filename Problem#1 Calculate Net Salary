@@ -1,0 +1,97 @@
+#include <iostream>
+using namespace std;
+
+int GetInput(int sal[][2], int);
+
+int calsal(int sal[][2], int);
+
+int FindUnlucky(int sal[][2], int lucky[], int);
+
+int DisplayOutput(int sal[][2], int lucky[], int);
+
+int main()
+{
+	const int ArraySize = 5;
+	int sal[ArraySize][2];
+	int lucky[ArraySize] = {0};
+	int numEmps = ArraySize;
+	
+	
+	cout<<"This Program will Calculate The Gross Salary and Net Salary of an Organaization"<<endl<<endl;
+	
+	GetInput( sal, numEmps);
+	
+	calsal( sal, numEmps);
+	
+	FindUnlucky( sal, lucky, numEmps);
+	
+	DisplayOutput( sal, lucky, numEmps);
+	
+	return 0;
+	
+}
+int GetInput(int sal[][2], int numEmps)
+{
+	for(int i=0; i<numEmps; i++)
+	{
+	cout<<"Please Insert Salary of the Employe"<<endl;
+	cin>>sal[i][0];
+	}	
+	
+	
+}
+int calsal(int sal[][2], int numEmps)
+{
+	for(int i=0; i<numEmps; i++)
+	{
+		if(sal[i][0]<=5000)
+			{
+				sal[i][1]=sal[i][0];
+			}
+		else
+		if(sal[i][0]<=10000)
+			{
+				sal[i][1]=0.05*sal[i][0];
+			}
+		else
+		if(sal[i][0]<=15000)
+			{
+				sal[i][1]=0.10*sal[i][0];
+			}
+		else
+			{
+				sal[i][1]=0.15*sal[i][0];
+			
+			}
+	}
+}
+
+int FindUnlucky(int sal[][2], int lucky[], int numEmps)
+{
+	int i, j, GSal, NSal;
+	
+	for(int i=0; i<numEmps; i++)
+	
+		GSal=sal[i][0];
+		NSal=sal[i][1];
+		
+		for(int j=0; j<numEmps; j++)
+			{
+		
+				if(GSal>sal[j][0] && NSal<sal[j][1])
+					{
+						lucky[i]=1;
+					}
+			}
+}
+int DisplayOutput(int sal[][2], int lucky[], int numEmps)
+{
+	for(int i=0; i<numEmps; i++)
+	{
+		if(lucky[i]==1)
+			{
+				cout<<"Employe No "<<i+1<<" is Unlucky "<<endl<< "Gross Salary is = "<<sal[i][0]<<endl<<"Net Salary is = "<<sal[i][1]<<endl<<endl;
+			}
+	}
+	
+}

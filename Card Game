@@ -1,0 +1,52 @@
+#include <iostream>
+#include<stdlib.h>
+#include<time.h>
+using namespace std;
+
+int shaffle(int [][13]);
+int deal(const int [][13], const char*[], const char*[] );
+
+
+int main() 
+{
+cout << "Hello world!";
+const char*suit[4]={"Heart","Diamond","Club","Spades"};
+const char*face[13]={"Ace","Deuce","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Jack","Queen","King"};
+int deck[3][13]={0};
+
+srand(time(0));
+
+shaffle(deck);
+
+deal(deck, face, suit);
+
+return 0;
+}
+
+int shaffle(int wdeck[][13])
+{
+    int row, col, card;
+    for(card=1; card<=52; card++)
+        {
+            do
+            {
+                row=rand()%4;
+                col=rand()%13;
+            }
+            while(wdeck[row][col]!=0);
+            wdeck[row][col]=card;
+            
+        }
+}    
+
+int deal(const int wdeck[][13], const char*wface[], const char*wsuit[])
+{
+    int row, col, card;
+    const char*space;
+    for(card=1; card<=52; card++)
+        for(row=0; row<=3; row++)
+            for(col=0; col<=12; col++)
+                if(wdeck[row][col]==card)
+                    cout<<card<<"="<<wface[col]<<" of "<<wsuit[row]<<endl;
+                          
+}
